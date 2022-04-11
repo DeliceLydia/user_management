@@ -1,4 +1,4 @@
-const models = require("../database/models");
+import models from '../database/models';
 
 class User {
   static async createUser(req, res) {
