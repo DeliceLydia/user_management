@@ -4,7 +4,7 @@
   "description": "This is a backend server for an application that has the option of managing users",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
