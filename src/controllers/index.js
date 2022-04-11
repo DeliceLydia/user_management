@@ -1,4 +1,4 @@
-import models from '../database/models';
+import models from '../db/models';
 
 class User {
   static async createUser(req, res) {
