@@ -10,7 +10,23 @@ const db = {};
 
 let sequelize;
 if (config.url) {
-  sequelize = new Sequelize(config.url, config);
+  sequelize=new Sequelize(
+    process.env[config.use_env_variable],config
+  );
+  sequelize=new Sequelize(
+    process.env.DB_NAME,
+    process.env.DB_USER,
+    process.env.DB_PASSWORD,{
+      host:process.env.DB_HOST,
+      port:process.env.DB_PORT,
+      dialect:'postgres',
+      dialectOption:{
+        ssl:true,
+        native:true
+      },
+      logging:true
+    }
+  );
 } else {
   sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
@@ -21,7 +37,7 @@ fs
     return (file.indexOf('.') !== 0) && (file !== basename) && (file.slice(-3) === '.js');
   })
   .forEach(file => {
-    const model = sequelize['import'](path.join(__dirname, file));
+    const model = require(path.join(__dirname, file))(sequelize, Sequelize.DataTypes)
     db[model.name] = model;
   });
 
