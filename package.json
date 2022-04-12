@@ -1,0 +1,56 @@
+{
+  "name": "user_management",
+  "version": "1.0.0",
+  "description": "This is a backend server for an application that has the option of managing users",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node index.js",
+    "test": "cross-env NODE_ENV=test jest --testTimeout=10000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DeliceLydia/user_management.git"
+  },
+  "author": "Lydia Ingabire",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DeliceLydia/user_management/issues"
+  },
+  "homepage": "https://github.com/DeliceLydia/user_management#readme",
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "verbose": true
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "pg": "^8.7.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.18.0",
+    "sequelize-cli": "^6.4.1",
+    "@babel/node": "^7.5.5",
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.9",
+    "@babel/eslint-parser": "^7.17.0",
+    "@babel/plugin-syntax-jsx": "^7.16.7",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "@babel/register": "^7.5.5",
+    "nodemon": "^2.0.15"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-react-hooks": "^4.4.0",
+    "jest": "^27.5.1",
+    "supertest": "^6.2.2"
+  }
+}
