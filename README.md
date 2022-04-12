@@ -14,6 +14,9 @@ This is a backend server for an application that has the option of managing user
 - PostgreSql
 - Equalizer
 
+## Run tests
+``` npm test ```
+
 ## Endpoints
 
 | Ressource URL | Methods  | Description  |
