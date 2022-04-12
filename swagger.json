@@ -1,0 +1,151 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+      "title": "User-management",
+      "description": "This is a backend server for an application that has the option of managing users",
+      "version": "0.1"
+    },
+    "servers": [
+      {
+        "url": "http://localhost:3000"
+      }
+    ],
+    "paths": {
+      "/api/users": {
+        "post": {
+          "description": "This API is for creating a user",
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/api_users_body"
+                },
+                "examples": {
+                  "0": {
+                    "value": "{\n\t\"name\": \"cyifuzo\",\n\t\"email\": \"cyifuzo@gmail.com\",\n\t\"role\": \"developer\"\n}"
+                  }
+                }
+              }
+            }
+          },
+          "responses": {
+            "201": {
+              "description": "User created successfully",
+              "content": {
+                "application/json; charset=utf-8": {
+                  "schema": {
+                    "type": "string"
+                  },
+                  "examples": {}
+                }
+              }
+            }
+          },
+          "servers": [
+            {
+              "url": "http://localhost:3000"
+            }
+          ]
+        },
+        "servers": [
+          {
+            "url": "http://localhost:3000"
+          }
+        ]
+      },
+      "/api/users/12": {
+        "delete": {
+          "description": "This API is for deleting a user",
+          "responses": {
+            "204": {
+              "description": "User deleted"
+            }
+          },
+          "servers": [
+            {
+              "url": "http://localhost:3000"
+            }
+          ]
+        },
+        "servers": [
+          {
+            "url": "http://localhost:3000"
+          }
+        ]
+      },
+      "/api/users/11": {
+        "put": {
+          "description": "This API is for updating a user",
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/users_11_body"
+                },
+                "examples": {
+                  "0": {
+                    "value": "{\n\t\"name\": \"lydia\",\n\t\"email\": \"lydie@gmail.com\",\n\t\"role\": \"developer\"\n}"
+                  }
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "user updated successfully",
+              "content": {
+                "application/json; charset=utf-8": {
+                  "schema": {
+                    "type": "string"
+                  },
+                  "examples": {}
+                }
+              }
+            }
+          },
+          "servers": [
+            {
+              "url": "http://localhost:3000"
+            }
+          ]
+        },
+        "servers": [
+          {
+            "url": "http://localhost:3000"
+          }
+        ]
+      }
+    },
+    "components": {
+      "schemas": {
+        "api_users_body": {
+          "type": "object",
+          "properties": {
+            "role": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string"
+            }
+          }
+        },
+        "users_11_body": {
+          "type": "object",
+          "properties": {
+            "role": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
