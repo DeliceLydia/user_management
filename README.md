@@ -14,6 +14,9 @@ This is a backend server for an application that has the option of managing user
 - PostgreSql
 - Equalizer
 
+## Heroku
+Kindly check the application live [here](https://lydia-user-manager-app.herokuapp.com/)
+
 ## Run tests
 ``` npm test ```
 
