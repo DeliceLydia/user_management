@@ -21,16 +21,15 @@ describe('Post user endpoint', () => {
         userId: 1,
         name: 'lydie',
         email: 'delydia@gmail.com',
-        role: 'developer'
+        role: 'developer',
       });
 
     expect(res.statusCode).toEqual(200);
-  })
+  });
 
-  it('should delet a user', async () => {
+  it('should delete a user', async () => {
     const res = await request(app)
-      .delete('/api/users/1')
+      .delete('/api/users/1');
     expect(res.statusCode).toEqual(204);
-  })
-    
+  });
 });
