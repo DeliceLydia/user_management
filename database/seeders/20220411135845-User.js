@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 module.exports = {
   up: (queryInterface, Sequelize) => queryInterface.bulkInsert(
     'Users',
@@ -22,3 +23,4 @@ module.exports = {
 
   down: (queryInterface, Sequelize) => queryInterface.bulkDelete('Users', null, {}),
 };
+/* eslint-disable no-unused-vars */
