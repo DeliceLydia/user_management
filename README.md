@@ -35,7 +35,6 @@ To get this project set up on your local machine, follow these simple steps:
 - Clone the repository ``` https://github.com/DeliceLydia/user_management.git ```
 - Cd in the project ``` user_management ```
 - Install dependencies ``` npm i ```
-- Run ``` equalize db:create ```
 - Run ``` equalize db:migrate ```
 - Start your server ``` npm start ```
 - Run the app ``` http://localhost:3000/ ```
